@@ -1,5 +1,3 @@
-import transitions from "@material-ui/core/styles/transitions";
-
 export default (state, action) => {
     switch(action.type){
         case "Delete_Transaction":

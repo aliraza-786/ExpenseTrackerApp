@@ -1,4 +1,3 @@
-import transitions from '@material-ui/core/styles/transitions';
 import React, {useContext} from 'react';
 import {GlobalContext} from '../context/GlobalState';
 import Transaction from '../Components/Transaction';

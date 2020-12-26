@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(0),
       width: theme.spacing('48'),
       height: theme.spacing('auto'),
-      padding: '5px',
     },
   },
 }));
@@ -27,10 +26,12 @@ export default function Trasaction({ transaction }) {
 
   return (
     <>
-      <div className={classes.root} style={{float:'left'}}>
-        <Paper elevation={1}>
-          <b><span style={{float:'left'}}>{transaction.text} </span><span style={{float:'right'}}>${transaction.amount}</span></b>
+      <div className={classes.root} style={{float:'left'}} >
+        <Paper elevation={3} >
+          <b><span style={{float:'left', marginLeft:'5px'}}>{transaction.text} </span>
+          <span style={{float:'right', marginRight:'5px'}}>${transaction.amount}</span></b>
         </Paper>
+
       </div>
       <div>
       <CancelOutlinedIcon onClick={() => deleteTransaction(transaction.id)}/>

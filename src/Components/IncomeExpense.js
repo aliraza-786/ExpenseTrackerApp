@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import {GlobalContext} from '../context/GlobalState';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -27,14 +27,20 @@ export default function IncomeExpense() {
   const expense = (amounts.filter(item => item < 0).reduce((acc, item) => (acc += item),0) * 1 ).toFixed(2);
 
   const classes = useStyles();
+  const Incomestyle= {
+    color:'lightgreen'
+  }
+  const Expensestyle= {
+    color:'#F9938B'
+  }
 
   return (
       <div className={classes.root}>
       <Paper elevation={2}>
-        <h3>Income <br/>${income}</h3>
+        <h3>Income <br/> <b style={Incomestyle}>${income}</b></h3>
       </Paper>
       <Paper elevation={2}>
-        <h3>Expense <br/>${expense}</h3>
+        <h3>Expense <br/> <b style={Expensestyle}>${expense}</b></h3>
       </Paper>
       </div>
   );
